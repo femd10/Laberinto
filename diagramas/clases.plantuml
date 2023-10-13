@@ -1,0 +1,46 @@
+@startuml
+left to right direction
+class Juego{
+    pantalla
+    clock
+    Nivel Nivel
+    run()
+    Nivel
+}
+class Nivel{
+    ventana
+    tamanoRecuadro : int
+    LectorArchivo Lector
+    estructuraNivel = Lector.generar_matriz()
+    Sprite.group Pared
+    Sprite.group Suelo
+    Sprite.GroupSingle Meta
+    Sprite.GroupSingle Jugador
+    
+    ubicar_sprites()
+    run()
+}
+
+class LectorArchivo{
+    txt : string
+    generar_matriz()
+
+}
+class Tile{
+    pos
+    tamaño
+    direccionSprite
+    update()
+}
+Tile <|-- Suelo
+Tile <|-- Pared
+Tile <|-- Meta
+Tile <|-- Jugador
+
+Nivel "1" *-- "n" Tile:"contiene"
+Nivel "1" *-- "1" LectorArchivo:"contiene"
+Juego o-- Nivel
+
+
+
+@enduml
