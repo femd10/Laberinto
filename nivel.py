@@ -26,7 +26,7 @@ class Nivel:
                 elif columna =="w":
                     tile=Meta(  (x,y),self.tamanoRecuadro)
                     self.meta.add(tile)
-                elif columna =="x":
+                elif columna =="X":
                     tile=Jugador((x,y),self.tamanoRecuadro)
                     tile2=Suelo((x,y),self.tamanoRecuadro)
                     self.jugador.add(tile)
