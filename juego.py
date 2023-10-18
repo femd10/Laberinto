@@ -6,7 +6,7 @@ class Juego:
         self.pantalla= pygame.display.set_mode((500, 600), pygame.RESIZABLE)
         self.clock = pygame.time.Clock()
         self.activo=True
-        self.nivel= Nivel(self.pantalla, 100)
+        self.nivel= Nivel(self.pantalla,75)
         
     def correr(self):
         while self.activo:

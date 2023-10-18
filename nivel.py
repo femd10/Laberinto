@@ -31,7 +31,7 @@ class Nivel:
                     tile2=Suelo((x,y),self.tamanoRecuadro)
                     self.jugador.add(tile)
                     self.suelos.add(tile2)
-                else:
+                elif columna=="0":
                     tile=Suelo((x,y),self.tamanoRecuadro)
                     self.suelos.add(tile)
                 columna_index+=1
